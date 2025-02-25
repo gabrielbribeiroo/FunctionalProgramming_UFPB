@@ -30,6 +30,14 @@ drop_5 :: [Int] -> [Int]
 drop_5 xs = drop 5 xs
 
 
+copy :: a -> (a,a) 
+copy x = (x, x)
+
+
+apply :: (a -> b) -> a -> b 
+apply (*5) 2 
+
+
 second :: [a] -> a
 second xs = head (tail xs)
 

@@ -1,5 +1,7 @@
 double x = x + x
 
+double' x = x * 2
+
 quadruple x = double (double x)
 
 factorial n = product [1..n]

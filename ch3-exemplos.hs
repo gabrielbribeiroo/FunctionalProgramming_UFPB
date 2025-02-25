@@ -30,4 +30,21 @@ drop_5 :: [Int] -> [Int]
 drop_5 xs = drop 5 xs
 
 
+second :: [a] -> a
+second xs = head (tail xs)
 
+
+swap :: (Int, Int) -> (Int, Int)
+swap (x,y) = (y,x)
+
+
+pair :: Int -> Int -> (Int, Int)
+pair x y = (x,y)
+
+
+palindrome :: (Eq a) => [a] -> Bool
+palindrome xs = reverse xs == xs 
+
+
+twice :: (a -> a) -> a -> a
+twice f x = f (f x) 

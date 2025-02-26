@@ -38,3 +38,22 @@ count x xs = length [x' | x' <- xs, x == x']
 permut :: Eq a => [a] -> [[a]]
 permut [] = [[]]
 permut (x:xs) = [a:p | a <- (x:xs), p <- permut xs]
+
+
+
+-- exercicios
+replicate :: Int -> a -> [a]
+replicate n x = [x | _ <- [1..n]]
+
+
+perfects :: Int -> [Int]
+perfects n = [x | x <- [1..n], sum(fatores x) == x]
+   where fatores num = [i | i <- [1..num-1], num `mod` i == 0]
+
+
+cartesian :: [a] -> [b] -> [(a, b)]
+cartesian xs ys = [(x, y) | y <- ys | x <- xs]
+
+
+positions :: Eq a => a -> [a] -> [Int] 
+positions x xs = [i | (y, i) <- zip xs [0..], Just y == find (== x) [y]] 

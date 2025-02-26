@@ -13,7 +13,7 @@ signum' n = if n < 0 then -1
 
 -- Equações protegidas (guarded)
 
-abs_g n | n >= 0  = n
+abs_g n | n >= 0    = n
         | otherwise = -n
 
 signum_g n | n < 0     = -1

@@ -63,4 +63,16 @@ odds :: [a] -> [a]
 odds []     = []
 odds (_:xs) = evens xs
  
-   
+
+--exercícios
+(^) :: Int -> Int -> Int 
+_ ^ 0 = 1 
+x ^ n = x * (x ^ (n - 1))
+
+and :: [Bool] -> Bool 
+and [] = True                -- Uma lista vazia é considerada verdadeira 
+and (x:xs) = x && and xs    -- O resultado é True se x for True e o resto da lista também for 
+
+concat :: [[a]] -> [a] 
+concat [] = []                  -- Uma lista vazia retorna uma lista vazia 
+concat (xs:xss) = xs ++ concat xss   -- Junta a primeira lista com a concatenação do restante

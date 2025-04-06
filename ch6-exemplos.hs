@@ -76,3 +76,13 @@ and (x:xs) = x && and xs    -- O resultado é True se x for True e o resto da li
 concat :: [[a]] -> [a] 
 concat [] = []                  -- Uma lista vazia retorna uma lista vazia 
 concat (xs:xss) = xs ++ concat xss   -- Junta a primeira lista com a concatenação do restante
+
+insert :: Ord a => a -> [a] -> [a] 
+insert x [] = [x]     -- Caso base: inserir em uma lista vazia resulta em uma lista com apenas x 
+insert x (y:ys) 
+   | x <= y    = x : y : ys    -- Se x for menor ou igual a y, insere antes de y 
+   | otherwise = y : insert x ys   -- Caso contrário, continua a busca recursiva
+
+isort :: Ord a => [a] -> [a] 
+isort [] = []               -- Caso base: lista vazia já está ordenada 
+isort (x:xs) = insert x (isort xs)   -- Insere o primeiro elemento na lista ordenada restante

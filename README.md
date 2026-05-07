@@ -23,4 +23,4 @@ This repository contains exercise codes for the Functional Programming disciplin
 </div>
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
